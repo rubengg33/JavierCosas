@@ -1,0 +1,16 @@
+
+public class Ejercicio3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		float valor;
+		String porcentaje;
+		
+		
+	}
+	public String Descuento(float valor) {
+		return porcentaje;
+		
+	}
+
+}

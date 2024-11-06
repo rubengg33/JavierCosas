@@ -1,0 +1,11 @@
+package procesos;
+
+public class P13 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ProcessBuilder pb = new ProcessBuilder("java","-version");
+		ProcessHandle ph = ProcessHandle.current();
+	}
+
+}

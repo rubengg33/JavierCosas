@@ -1,0 +1,30 @@
+package dom;
+
+import java.io.File;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+
+
+public class leerXMLDOMDesconocido {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		File fichero = new File ("C:/dir1/concesionario.xml");
+
+		DocumentBuilderFactory dbFactory =  DocumentBuilderFactory.newInstance();
+		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+		Document doc =   dBuilder.parse(fichero);
+
+		doc.getDocumentElement().normalize();
+		procesaNodo(doc.getDocumentElement());
+	}
+	public static void procesaNodo(Node nodo) {
+		if(nodo.getNodeType() ==-1) {
+			
+		}
+	}
+}

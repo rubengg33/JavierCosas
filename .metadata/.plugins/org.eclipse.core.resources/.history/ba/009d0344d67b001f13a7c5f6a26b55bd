@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Ejercicio3 {
+	public static void main(String[] args) {
+		int porcentaje;
+		float valor;
+	Ejercicio3 ejer3 = new Ejercicio3();
+		
+	}
+	public String Descuento(float valor) {
+		float porciento;
+		String porc;
+		int porcentaje;
+		System.out.println("Dime el valor de tu compra");
+		Scanner sc= new Scanner(System.in);
+		valor=sc.nextFloat();
+		if(valor>=150.10) {
+			porcentaje=10;
+		}
+		else if(valor>200.05) {
+		
+			porcentaje=15;
+		}
+		porciento=valor*porcentaje/100;
+		return porciento;
+		
+	}
+
+}

@@ -1,0 +1,17 @@
+package dom;
+
+import java.io.File;
+
+import javax.sql.rowset.spi.XmlReader;
+import javax.xml.parsers.DocumentBuilderFactory;
+
+public class leerXMLDOM {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		File fichero = new File ("C:/dir1/concesionario.xml");
+		
+		DocumentBuilderFactory dbFactory =  DocumentBuilderFactory.newInstance();
+	}
+
+}

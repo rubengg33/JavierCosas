@@ -1,0 +1,12 @@
+package dom;
+
+import javax.sql.rowset.spi.XmlReader;
+
+public class leerXMLDOM {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		XmlReader pp = new XmlReader("C:/dir1/concesionario.xml");
+	}
+
+}

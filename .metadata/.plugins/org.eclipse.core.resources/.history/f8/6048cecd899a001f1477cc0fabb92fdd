@@ -1,0 +1,36 @@
+package procesos;
+
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
+
+public class P10 {
+
+    public static void main(String[] args) throws IOException {
+        // Crear los comandos dependiendo del sistema operativo
+        String os = System.getProperty("os.name").toLowerCase();
+        List<ProcessBuilder> builders;
+        
+        if (os.contains("win")) {
+            // Para Windows
+            builders = Arrays.asList(
+                    new ProcessBuilder("cmd", "/c", "echo hola"),
+                    new ProcessBuilder("cmd", "/c", "findstr hola")
+            );
+        } else {
+            // Para Unix (Linux, macOS)
+            builders = Arrays.asList(
+                    new ProcessBuilder("echo", "hola"),
+                    new ProcessBuilder("grep", "hola")
+            );
+        }
+
+        // Inicia la tubería (pipeline)
+        List<Process> pipeline = ProcessBuilder.startPipeline(builders);
+
+        // Leer la salida del proceso final en la tubería
+        pipeline.get(pipeline.size() - 1).inputReader().lines()
+                .forEach(System.out::println);
+    }
+}
+

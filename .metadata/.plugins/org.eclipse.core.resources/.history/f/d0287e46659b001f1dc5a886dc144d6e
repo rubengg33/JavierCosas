@@ -1,0 +1,24 @@
+package dom;
+
+import java.io.File;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
+import org.w3c.dom.Document;
+
+
+public class leerXMLDOMDesconocido {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		File fichero = new File ("C:/dir1/concesionario.xml");
+
+		DocumentBuilderFactory dbFactory =  DocumentBuilderFactory.newInstance();
+		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+		Document doc =   dBuilder.parse(fichero);
+
+		doc.getDocumentElement().normalize();
+	}
+
+}

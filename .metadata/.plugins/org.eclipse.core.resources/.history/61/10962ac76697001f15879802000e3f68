@@ -1,0 +1,10 @@
+package procesos;
+
+public class P9 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ProcessBuilder pb = new ProcessBuilder("dir","C:/dir1")
+	}
+
+}

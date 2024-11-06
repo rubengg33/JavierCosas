@@ -1,0 +1,18 @@
+package procesos;
+
+public class P13 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ProcessBuilder pb = new ProcessBuilder("java","-version");
+		ProcessHandle ph = ProcessHandle.current();
+		try {
+			ProcessHandle.Info processInfo = ProcessHandle.Info();
+			System.out.println("PID: "+ph.pid());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

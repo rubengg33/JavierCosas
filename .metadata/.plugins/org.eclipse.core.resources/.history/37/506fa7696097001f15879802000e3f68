@@ -1,0 +1,19 @@
+package procesos;
+
+import java.io.File;
+import java.util.Scanner;
+
+public class p8Lanzador {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Aplicacion a ejecutar: ");
+		String aplicacion = sc.nextLine();
+		
+		ProcessBuilder pb = new ProcessBuilder("java","p8Lanzado", aplicacion);
+		pb.directory(new File("bin"));
+		pb.inheritIO();
+	}
+
+}

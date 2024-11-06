@@ -1,0 +1,16 @@
+package procesos;
+
+import java.io.File;
+
+public class P12 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ProcessBuilder pb = new ProcessBuilder("java","-version");
+		pb.redirectErrorStream(true);
+		
+		File dir = new File("C:/dir1");
+		File log = new File(dir, "java-version.log");
+	}
+
+}

@@ -1,0 +1,28 @@
+package procesos;
+
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
+
+public class P10 {
+
+    public static void main(String[] args) throws IOException {
+        // Lista de comandos válidos para la tubería
+        List<ProcessBuilder> builders = Arrays.asList(
+                new ProcessBuilder("echo", "hola"),
+                new ProcessBuilder("findstr", "hola") // Cambié "finstr" a "grep"
+        );
+
+        // Inicia la tubería (solo en Java 9 o superior)
+        List<Process> pipeline = ProcessBuilder.startPipeline(builders);
+
+        // Opcional: Leer la salida de cada proceso
+        pipeline.forEach(process -> {
+            try (var reader = process.inputReader()) {
+                reader.lines().forEach(System.out::println);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+    }
+}

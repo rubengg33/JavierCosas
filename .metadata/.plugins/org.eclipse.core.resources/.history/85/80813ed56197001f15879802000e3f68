@@ -1,0 +1,21 @@
+package procesos;
+
+import java.io.IOException;
+
+public class p8Lanzado {
+
+	public static void main(String[] args) throws IOException, InterruptedException {
+		// TODO Auto-generated method stub
+		if(args.length!=1) {
+			System.out.println("Uso: p8Lanzado <nombre_de_aplicacion>");
+			System.exit(1);
+		}
+		
+		String aplicacion = args[0];
+		ProcessBuilder pb = new ProcessBuilder(aplicacion);
+		Process proceso = pb.start();
+		
+		int codigoFinalizacion = proceso.waitFor();
+	}
+
+}

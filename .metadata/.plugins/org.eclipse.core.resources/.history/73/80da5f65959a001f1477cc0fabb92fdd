@@ -1,0 +1,30 @@
+package procesos;
+
+import java.io.IOException;
+import java.util.List;
+
+public class P13 {
+
+    public static void main(String[] args) {
+        // Crear el proceso con "java -version"
+        ProcessBuilder pb = new ProcessBuilder("java", "-version");
+
+        // Imprimir los argumentos antes de iniciar el proceso
+        List<String> command = pb.command();
+        System.out.println("Comando y argumentos: " + command);
+
+        try {
+            Process process = pb.start(); // Inicia el proceso
+            ProcessHandle ph = process.toHandle();
+            ProcessHandle.Info processInfo = ph.info();
+            
+            System.out.println("PID: " + ph.pid());
+            System.out.println("Instante comienzo: " + processInfo.startInstant().orElse(null));
+            System.out.println("Tiempo total CPU: " + processInfo.totalCpuDuration().orElse(null));
+            System.out.println("Usuario: " + processInfo.user().orElse("No disponible"));
+            
+        } catch (IOException e) {
+            System.err.println("Error al iniciar el proceso: " + e.getMessage());
+        }
+    }
+}

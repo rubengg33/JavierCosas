@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Ejercicio3 {
+	private String porcentaje;
+	private String valor;
+	public static void main(String[] args) {
+		
+	Ejercicio3 ejer3 = new Ejercicio3();
+		System.out.println("Dime el valor de tu compra");
+		Scanner sc= new Scanner(System.in);
+		valor=sc.next();
+		
+	}
+	public String Descuento(float valor) {
+		return porcentaje;
+		
+	}
+
+}

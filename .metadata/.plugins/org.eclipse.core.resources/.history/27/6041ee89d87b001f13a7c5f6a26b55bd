@@ -1,0 +1,29 @@
+
+public class Ejercicio3 {
+	public static void main(String[] args) {
+		int porcentaje;
+	Ejercicio3 ejer3 = new Ejercicio3();
+		ejer3.Descuento((float) 150.10);
+	}
+	public String Descuento(float valor) {
+		float porciento;
+		int porcentaje;
+		if(valor>=150.10) {
+			porcentaje=10;
+			float descuento=valor*porcentaje/100;
+			String string="el porcentaje es: "+porcentaje+" y se descuenta "+descuento;
+			
+		}
+		else if(valor>200.05) {
+		
+			porcentaje=15;
+			float descuento=valor*porcentaje/100;
+			String string="el porcentaje es: "+porcentaje+" y se descuenta "+descuento;
+			
+		}
+		return toString();
+		
+		
+	}
+
+}

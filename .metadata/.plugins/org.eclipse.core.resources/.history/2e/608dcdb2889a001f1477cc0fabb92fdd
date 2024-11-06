@@ -1,0 +1,18 @@
+package procesos;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class P10 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ProcessBuilder pb1;
+		ProcessBuilder pb2; 
+		List builders = Arrays.asList(
+				 new ProcessBuilder("echo","hola"),
+				  new ProcessBuilder("finstr","hola"));
+		Process pipeline = ProcessBuilder.startPipeline();
+	}
+
+}

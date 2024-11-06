@@ -1,0 +1,22 @@
+package procesos;
+
+import java.io.File;
+import java.io.IOException;
+
+public class P12 {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		ProcessBuilder pb = new ProcessBuilder("java","-version");
+		pb.redirectErrorStream(true);
+		
+		File dir = new File("C:/dir1");
+		File log = new File(dir, "java-version.log");
+		
+		pb.redirectOutput(log);
+		Process p = pb.start();
+		
+		int salida = p.waitFor();
+	}
+
+}

@@ -1,0 +1,17 @@
+package aleatorio;
+
+public class Ej1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 ArrayList<String> nombres = new ArrayList<>();
+	        nombres.add("Ana");
+	        nombres.add("Luis");
+	        nombres.add("Carlos");
+
+	        int[] calificaciones = {85, 90, 78};
+
+	        guardarCalificaciones(nombres, calificaciones, "calificaciones.txt");
+	}
+
+}
